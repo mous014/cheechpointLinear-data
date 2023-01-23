@@ -1,0 +1,25 @@
+set1 = [3, 1, 7, 9]
+set2 = [2, 4, 1, 9, 3]
+
+sum = 0
+
+
+for i in set1:
+    if i in set2:
+        sum += i
+
+
+print(sum)
+
+
+////////////////////////Solution 2 with an hash table
+set1 = [3, 1, 7, 9]
+set2 = [2, 4, 1, 9, 3]
+resultHash = {}
+sum = 0
+for i in set1:
+    resultHash[i] = 1
+for i in set2:
+    if i in resultHash:
+        sum += i
+print(sum)
